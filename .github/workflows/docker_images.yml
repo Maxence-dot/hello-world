@@ -35,9 +35,9 @@ jobs:
           # Server address of Docker registry. If not set then will default to Docker Hub
           registry: guestbook
           # Username used to log against the Docker registry
-          username: ${{sources.DOCKER_USER_NAME}}
+          username: ${{secrets.DOCKER_USER_NAME}}
           # Password or personal access token used to log against the Docker registry
-          password: ${{sources.DOCKER_USER_PASSWORD}}
+          password: ${{secrets.DOCKER_USER_PASSWORD}}
       
       - name: Build and push
         id: docker_build
